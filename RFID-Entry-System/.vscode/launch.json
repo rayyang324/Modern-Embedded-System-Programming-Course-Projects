@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations":[
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}\\build\\Debug\\RFID-Entry-System.elf",
+            "name": "Debug with ST-Link and STM32H723 Peripheral",
+            "request": "launch",
+            "type": "cortex-debug",
+            "breakAfterReset": true,
+            "stm32cubeprogrammer":  "C:\\ST\\STM32CubeCLT_1.22.0\\STM32CubeProgrammer\\bin",
+            "showDevDebugOutput": "none",
+            "device": "STM32H723ZG",
+            "interface": "swd",
+            "svdFile": "${workspaceFolder}\\STM32H723.svd",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "servertype": "stlink"
+        },
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}\\build\\Debug\\RFID-Entry-System.elf",
+            "name": "Debug with ST-Link with Cortex-M7 Peripheral",
+            "request": "launch",
+            "type": "cortex-debug",
+            "breakAfterReset": true,
+            "stm32cubeprogrammer":  "C:\\ST\\STM32CubeCLT_1.22.0\\STM32CubeProgrammer\\bin",
+            "showDevDebugOutput": "none",
+            "device": "STM32H723ZG",
+            "interface": "swd",
+            "svdFile": "${workspaceFolder}\\Cortex-M7.svd",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "servertype": "stlink"
+        }
+    ]
+}
