@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "Servo-Motor.h"
+#include "Stepper-Motor.h"
 #include "bsp.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -102,8 +102,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    /*Rotates a revolution (360 degrees)*/
-    ServoRotate(512);
+    /*Rotates a revolution (360 degrees)*/ 
+    OpenDoor(90);
+    BSP_delay(500);
+    CloseDoor(90);
     BSP_delay(500);
     /* USER CODE BEGIN 3 */
   }
